@@ -1,0 +1,200 @@
+:root {
+    --dark-bg: #1a1a2e;
+    --darker-bg: #16213e;
+    --card-bg: #0f3460;
+    --primary: #6c5ce7;
+    --accent: #00cec9;
+    --text: #e6e6e6;
+    --text-muted: #b8b8b8;
+    --input-bg: #2d3748;
+    --input-border: #4a5568;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    background-color: var(--darker-bg);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(108, 92, 231, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(166, 149, 254, 0.5));
+}
+
+.logo p {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.btn-signup {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+.btn-signup:hover {
+    background-color: #5a4bd1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+.container-scroll {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.scroll-content {
+    width: 600px;
+    max-height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Estilo personalizado para la barra de scroll */
+.scroll-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-content::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+    border-radius: 10px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+    color: var(--text);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(0, 206, 201, 0.25);
+}
+
+.btn-custom {
+    background-color: var(--primary);
+    border: none;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-custom:hover {
+    background-color: #5a4bd1;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .scroll-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-signup {
+        margin-top: 1rem;
+    }
+}

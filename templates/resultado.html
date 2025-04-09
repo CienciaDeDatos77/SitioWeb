@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Rueda de la Vida</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/resultado.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="https://www.flaticon.es/iconos-gratis/neumatico" title="neumático iconos"></a>
+            <p>Rueda De <br>La Vida J&C</p>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Inicio</a>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+        </div>
+    </nav>
+    
+    <div class="results-container">
+        <h1>Tus Resultados</h1>
+        <h2>Gráfico de Evaluación</h2>
+        
+        <div class="chart-container">
+            <img src="{{ url_for('static', filename='images/grafico.png') }}" alt="Gráfico de Evaluación de la Rueda de la Vida">
+        </div>
+        
+        <div class="analysis-section">
+            <h3 class="analysis-title">Análisis de tu Rueda de la Vida</h3>
+            <p class="analysis-text">
+                Este gráfico representa el balance actual en las diferentes áreas de tu vida. 
+                Una rueda equilibrada muestra puntuaciones similares en todos los aspectos, 
+                lo que indica un desarrollo armónico. Las áreas con puntuaciones más bajas 
+                pueden representar oportunidades para enfocar tu crecimiento personal.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
